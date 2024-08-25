@@ -112,47 +112,57 @@ nav ul li a:hover {
     display: block;
 }
 
-@media screen and (min-width: 768px) {
-    .hero .container {
-        flex-direction: row;
-        width: 100%;
-    }
-
-    .hero .image {
-        display: block;
-    }
-
-    .learn-more-button {
-        width: auto;
-    }
-
-    .contact-button {
-        width: auto;
-    }
-}
-
-@media (max-width: 767px) {
-    header {
-        text-align: center;
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     nav ul {
         flex-direction: column;
     }
 
-    .hero .container {
-        flex-direction: column;
+    nav ul li {
+        margin: 10px 0;
     }
 
+    .hero .container {
+        flex-direction: column;
+        text-align: left;
+        padding: 15px
+    }
+
+    .hero .text, .hero .image {
+        flex: none;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 15px;
+    }
+
+    .hero {
+        padding: 40px 0;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .contact-button, .learn-more-button {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    
     .hero .image {
         display: none;
     }
-
-    .learn-more-button {
-        width: 100%;
-    }
-
-    .contact-button {
-        width: 100%;
-    }
 }
+
